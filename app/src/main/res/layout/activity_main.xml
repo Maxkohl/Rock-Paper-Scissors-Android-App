@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E3F7DB"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btn_scissors"
-        android:layout_width="266dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="245dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginBottom="52dp"
         android:text="Scissors"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -21,57 +23,87 @@
 
     <Button
         android:id="@+id/btn_paper"
-        android:layout_width="261dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="244dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginBottom="4dp"
         android:text="Paper"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_scissors"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_rock"
-        android:layout_width="281dp"
-        android:layout_height="61dp"
+        android:layout_width="243dp"
+        android:layout_height="53dp"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
-        android:layout_marginBottom="36dp"
         android:text="Rock"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_paper"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/iv_input"
+        android:id="@+id/iv_userChoice"
         android:layout_width="159dp"
         android:layout_height="155dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_output"
+        app:layout_constraintTop_toBottomOf="@+id/iv_compChoice"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/iv_output"
-        android:layout_width="414dp"
-        android:layout_height="148dp"
-        android:layout_marginTop="32dp"
+        android:id="@+id/iv_compChoice"
+        android:layout_width="159dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tv_score"
-        android:layout_width="225dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="32dp"
-        android:text="Score"
+        android:layout_width="333dp"
+        android:layout_height="32dp"
+        android:text="Your Score: 0      Computer Score: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_rock"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Computer Choice"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="203dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
